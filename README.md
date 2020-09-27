@@ -2,7 +2,7 @@
 DWM is a dynamic window manager made by suckless - this is my version of it.
 
 ## TO-DO
-- [ ] Initial commit
+- [X] Initial commit
 - [ ] Stack attach fix
 - [ ] Remove monacle
 - [ ] Centralize window title
