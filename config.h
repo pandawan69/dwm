@@ -5,17 +5,17 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char normfgcolor[]      = "#d8dee9";
-static const char normbgcolor[]      = "#2e3440";
-static const char normbordercolor[]  = "#3b4252";
-static const char selfgcolor[]       = "#81a1c1";
-static const char selbgcolor[]       = "#3b4252";
-static const char selbordercolor[]   = "#81a1c1";
-static const char titlefgcolor[]     = "#bf616a";
-static const char titlebgcolor[]     = "#2e3440";
-static const char titlebordercolor[] = "#2e3440";
+static const char *fonts[]          = { "Fira Code:style=Regular:pixelsize=12:autohint=true" };
+static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
+static const char normfgcolor[]      = "#ABB2BF";
+static const char normbgcolor[]      = "#282C34";
+static const char normbordercolor[]  = "#282C34";
+static const char selfgcolor[]       = "#282C34";
+static const char selbgcolor[]       = "#61AFEF";
+static const char selbordercolor[]   = "#61AFEF";
+static const char titlefgcolor[]     = "#ABB2BF";
+static const char titlebgcolor[]     = "#282C34";
+static const char titlebordercolor[] = "#282C34";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -77,11 +77,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,       	 	        XK_q,      killclient,     {0} },
+	{ MODKEY,      	 	        XK_q,      killclient,     {0} },
 	/* Launch programs with Super + Alt + Key */
 	{ MODKEY|Mod1Mask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|Mod1Mask,              XK_f,      spawn,     	   SHCMD("firefox") },
-	{ MODKEY|Mod1Mask,              XK_p,      spawn,     	   SHCMD("print") },
+	{ MODKEY|Mod1Mask,              XK_p,      spawn,     	   SHCMD("print") } ,
 	/* Layout */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
