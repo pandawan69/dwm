@@ -7,7 +7,7 @@ DWM is a dynamic window manager made by suckless - this is my version of it.
 - [X] Text Font
 - [ ] Icon Font
 - [ ] Stack attach fix
-- [ ] Centered windows
+- [X] Centered windows
 - [X] Gaps
 - [ ] Centralize window title
 - [ ] Bar active window indicator
