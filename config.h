@@ -6,7 +6,10 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Code:style=Regular:pixelsize=12:autohint=true" };
+static const char *fonts[]          = { "Fira Code:style=Regular:pixelsize=12:autohint=true",
+					"Font Awesome 5 Free Solid:style=Solid:pixelsize=12",
+       				       	"Font Awesome 5 Brands Regular:style=Regular:pixelsize=12",
+				      };
 static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
 static const char normfgcolor[]      = "#ABB2BF";
 static const char normbgcolor[]      = "#282C34";
@@ -25,7 +28,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4" };
 
 static const Rule rules[] = {
 	/* xprop(1):
