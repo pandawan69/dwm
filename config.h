@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Spotify",     NULL,       NULL,       4,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -83,10 +83,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,      	 	        XK_q,      killclient,     {0} },
-	/* Launch programs with Super + Alt + Key */
-	{ MODKEY|Mod1Mask,    	        XK_c,      spawn,     	   SHCMD("code") },
-	{ MODKEY|Mod1Mask,              XK_f,      spawn,     	   SHCMD("firefox") },
-	{ MODKEY|Mod1Mask,              XK_p,      spawn,     	   SHCMD("print") } ,
+	/* Launch programs with Super + Shift + Key */
+	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,     	   SHCMD("firefox") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,     	   SHCMD("print") } ,
 	/* Layout */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
@@ -112,7 +112,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|Mod1Mask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
