@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -15,8 +15,8 @@ static const char normfgcolor[]      = "#ABB2BF";
 static const char normbgcolor[]      = "#282C34";
 static const char normbordercolor[]  = "#282C34";
 static const char selfgcolor[]       = "#282C34";
-static const char selbgcolor[]       = "#61AFEF";
-static const char selbordercolor[]   = "#61AFEF";
+static const char selbgcolor[]       = "#ABB2BF";
+static const char selbordercolor[]   = "#ABB2BF";
 static const char titlefgcolor[]     = "#ABB2BF";
 static const char titlebgcolor[]     = "#282C34";
 static const char titlebordercolor[] = "#282C34";
