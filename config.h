@@ -88,6 +88,7 @@ static Key keys[] = {
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,     	   SHCMD("firefox") },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,     	   SHCMD("qutebrowser") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,     	   SHCMD(printcmd) } ,
 	/* Layout */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
