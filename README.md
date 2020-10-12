@@ -11,8 +11,8 @@ DWM is a dynamic window manager made by suckless - this is my version of it.
 - [X] Centralize window title
 - [X] Bar active window indicator
 - [X] Icon Font
-- [ ] dwmblocks
-- [ ] scripts folder
-- [ ] time/date
+- [X] dwmblocks
+- [X] scripts folder
+- [X] time/date
 - [ ] memory/cpu/storage
-- [ ] sound
+- [X] volume
