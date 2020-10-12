@@ -63,13 +63,18 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-/* print command */
-#define printcmd "scrot -s -f ~/img/Screenshots/%y.%m.%d_%H:%M:%S.png"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+
+/* print command */
+#define printcmd "scrot -s -f ~/img/Screenshots/%y.%m.%d_%H:%M:%S.png"
+
+/* audio commands */
+#define volup "amixer sset 'Master' 5%+ && pkill -RTMIN+10 dwmblocks"
+#define voldown "amixer sset 'Master' 5%- && pkill -RTMIN+10 dwmblocks"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -90,13 +95,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_f,      spawn,     	   SHCMD("firefox") },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,     	   SHCMD("qutebrowser") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,     	   SHCMD(printcmd) } ,
+	/* Volume */
+	{ MODKEY|ShiftMask,             XK_equal,  spawn,	   SHCMD(volup) },
+	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
 	/* Layout */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	/* Gaps */
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	/* Monitors */
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
