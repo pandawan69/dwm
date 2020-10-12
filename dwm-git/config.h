@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvt", NULL };
+static const char *termcmd[]  = { "$TERMINAL", NULL };
 
 /* print command */
 #define printcmd "scrot -s -f ~/img/Screenshots/%y.%m.%d_%H:%M:%S.png"
@@ -92,8 +92,7 @@ static Key keys[] = {
 	{ MODKEY,      	 	        XK_q,      killclient,     {0} },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
-	{ MODKEY|ShiftMask,             XK_f,      spawn,     	   SHCMD("firefox") },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,     	   SHCMD("qutebrowser") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,     	   SHCMD(printcmd) } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,	   SHCMD(volup) },
