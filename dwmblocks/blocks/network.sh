@@ -9,4 +9,4 @@ else
 	networkStatus="Down"
 fi
 
-printf "$networkStatus"
+printf " $networkStatus"
