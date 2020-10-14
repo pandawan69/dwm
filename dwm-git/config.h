@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "$TERMINAL", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 /* print command */
 #define printcmd "scrot -s -f ~/img/Screenshots/%y.%m.%d_%H:%M:%S.png"
