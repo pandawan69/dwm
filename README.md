@@ -16,3 +16,6 @@ DWM is a dynamic window manager made by suckless - this is my version of it.
 - [X] time/date
 - [X] memory
 - [X] volume
+
+## Patches
+## Extra

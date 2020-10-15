@@ -11,6 +11,10 @@ static const char *fonts[]          = { "Fira Code:style=Regular:pixelsize=12:au
        				       	"Font Awesome 5 Brands Regular:style=Regular:pixelsize=12",
 				      };
 static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
+
+#include "/home/padawan/.cache/wal/colors-wal-dwm.h"
+
+/*
 static const char normfgcolor[]      = "#ABB2BF";
 static const char normbgcolor[]      = "#282C34";
 static const char normbordercolor[]  = "#282C34";
@@ -20,11 +24,13 @@ static const char selbordercolor[]   = "#ABB2BF";
 static const char titlefgcolor[]     = "#ABB2BF";
 static const char titlebgcolor[]     = "#282C34";
 static const char titlebordercolor[] = "#282C34";
+*/
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-	[SchemeSel]  = { selfgcolor, selbgcolor,  selbordercolor },
-	[SchemeTitle] = { titlefgcolor, titlebgcolor, titlebordercolor },
+	[SchemeNorm] = { norm_fg, norm_bg, norm_border },
+	[SchemeSel]  = { norm_bg, sel_bg,  sel_border },
+	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
 
 /* tagging */
@@ -66,7 +72,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_border, "-sf", norm_bg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 /* print command */
