@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 25;        /* gaps between windows */
+static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 5;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -12,29 +12,22 @@ static const char *fonts[]          = { "Fira Code:style=Regular:pixelsize=12:au
 				      };
 static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
 
-#include "/home/padawan/.cache/wal/colors-wal-dwm.h"
-
-/*
-static const char normfgcolor[]      = "#ABB2BF";
-static const char normbgcolor[]      = "#282C34";
-static const char normbordercolor[]  = "#282C34";
-static const char selfgcolor[]       = "#282C34";
-static const char selbgcolor[]       = "#ABB2BF";
-static const char selbordercolor[]   = "#ABB2BF";
-static const char titlefgcolor[]     = "#ABB2BF";
-static const char titlebgcolor[]     = "#282C34";
-static const char titlebordercolor[] = "#282C34";
-*/
+static const char norm_fg[]      = "#D8DEE9";
+static const char norm_bg[]      = "#2E3440";
+static const char norm_border[]  = "#D8DEE9";
+static const char sel_fg[]       = "#282C34";
+static const char sel_bg[]       = "#ABB2BF";
+static const char sel_border[]   = "#ABB2BF";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { norm_fg, norm_bg, norm_border },
-	[SchemeSel]  = { norm_bg, sel_bg,  sel_border },
+	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
+	[SchemeSel]  = { norm_bg, norm_fg,  sel_border },
 	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4" };
+static const char *tags[] = { "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -75,9 +68,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_border, "-sf", norm_bg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-/* print command */
-#define printcmd "scrot -s -f ~/img/Screenshots/%y.%m.%d_%H:%M:%S.png"
-
 /* audio commands */
 #define volup "amixer sset 'Master' 5%+ && pkill -RTMIN+10 dwmblocks"
 #define voldown "amixer sset 'Master' 5%- && pkill -RTMIN+10 dwmblocks"
@@ -98,8 +88,10 @@ static Key keys[] = {
 	{ MODKEY,      	 	        XK_q,      killclient,     {0} },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,     	   SHCMD(printcmd) } ,
+	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
+	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st ranger") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
