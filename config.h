@@ -17,12 +17,12 @@ static const char norm_bg[]      = "#2E3440";
 static const char norm_border[]  = "#D8DEE9";
 static const char sel_fg[]       = "#282C34";
 static const char sel_bg[]       = "#ABB2BF";
-static const char sel_border[]   = "#ABB2BF";
+static const char sel_border[]   = "#BF616A";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
-	[SchemeSel]  = { norm_bg, norm_fg,  sel_border },
+	[SchemeSel]  = { norm_bg, norm_fg,  norm_fg },
 	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
 
