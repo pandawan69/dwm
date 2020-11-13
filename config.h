@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 20;        /* gaps between windows */
 static const unsigned int snap      = 5;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -12,6 +12,8 @@ static const char *fonts[]          = { "Fira Code:style=Medium:pixelsize=12:aut
 				      };
 static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
 
+/*Nord theme*/
+/*
 static const char norm_fg[]      = "#D8DEE9";
 static const char norm_bg[]      = "#2E3440";
 static const char norm_border[]  = "#D8DEE9";
@@ -21,11 +23,32 @@ static const char sel_bg[]       = "#D8DEE9";
 static const char sel_border[]   = "#D8DEE9";
 
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
+	//               fg         bg         border   
 	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
 	[SchemeSel]  = { sel_fg, sel_bg,  sel_border },
 	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
+*/
+
+/*gruvbox theme*/
+#define dark "#1D2021"
+#define light "#FBF1C7"
+
+static const char norm_fg[]      = light;
+static const char norm_bg[]      = dark;
+static const char norm_border[]  = dark;
+
+static const char sel_fg[]       = dark;
+static const char sel_bg[]       = light;
+static const char sel_border[]   = light;
+
+static const char *colors[][3]      = {
+	//               fg         bg         border   
+	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
+	[SchemeSel]  = { sel_fg, sel_bg,  sel_border },
+	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
+};
+
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5" };
@@ -41,7 +64,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int attachbelow = 1;    /* 1 means attach after the currently active window */
@@ -120,7 +143,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ControlMask,           XK_q,      quit,           {1} },
+	{ MODKEY|ShiftMask,		XK_q,      quit,           {1} },
 	{ MODKEY|Mod1Mask,             	XK_q,      quit,           {0} },
 };
 
