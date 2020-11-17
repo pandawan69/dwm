@@ -10,7 +10,6 @@ static const char *fonts[]          = { "Fira Code:style=Medium:pixelsize=12:aut
 					"Font Awesome 5 Free Solid:style=Solid:pixelsize=12",
        				       	"Font Awesome 5 Brands Regular:style=Regular:pixelsize=12",
 				      };
-static const char dmenufont[]       = "Fira Code:style=Regular:pixelsize=12:autohint=true";
 
 /*Nord theme*/
 /*
@@ -59,7 +58,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Spotify",     NULL,       NULL,       4,            1,           -1 },
+	{ "Float",     NULL,       NULL,       1 << 8,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -89,7 +88,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_border, "-sf", norm_bg, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon};
 static const char *termcmd[]  = { "st", NULL };
 
 /* audio commands */
@@ -115,7 +114,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
-	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st ranger") } ,
+	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st -e ranger") } ,
+	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("st -e nvim") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
