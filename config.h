@@ -72,7 +72,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -108,7 +108,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,      	 	        XK_q,      killclient,     {0} },
+	{ MODKEY,            	 	        XK_q,      killclient,     {0} },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
@@ -117,10 +117,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st -e ranger") } ,
 	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("st -e nvim") } ,
 	/* Volume */
-	{ MODKEY|ShiftMask,             XK_equal,  spawn,	   SHCMD(volup) },
+	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
 	/* Layout */
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	/* Gaps */
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
