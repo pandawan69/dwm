@@ -11,25 +11,12 @@ static const char *fonts[]          = { "Fira Code:style=Medium:pixelsize=12:aut
        				       	"Font Awesome 5 Brands Regular:style=Regular:pixelsize=12",
 				      };
 
-/*Nord theme*/
-/*
-static const char norm_fg[]      = "#D8DEE9";
-static const char norm_bg[]      = "#2E3440";
-static const char norm_border[]  = "#D8DEE9";
+/* Themes */
+//Nord
+//#define dark "#2E3440"
+//#define light "#D8DEE9"
 
-static const char sel_fg[]       = "#2E3440";
-static const char sel_bg[]       = "#D8DEE9";
-static const char sel_border[]   = "#D8DEE9";
-
-static const char *colors[][3]      = {
-	//               fg         bg         border   
-	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
-	[SchemeSel]  = { sel_fg, sel_bg,  sel_border },
-	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
-};
-*/
-
-/*gruvbox theme*/
+//Gruvbox
 #define dark "#1D2021"
 #define light "#FBF1C7"
 
@@ -43,7 +30,7 @@ static const char sel_border[]   = light;
 
 static const char *colors[][3]      = {
 	//               fg         bg         border   
-	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
+	[SchemeNorm] = { norm_fg, norm_bg, norm_border },
 	[SchemeSel]  = { sel_fg, sel_bg,  sel_border },
 	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
@@ -68,9 +55,12 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int attachbelow = 1;    /* 1 means attach after the currently active window */
 
+#include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
+  { "[M]",      monocle },
+ 	{ "[@]",      dwindle },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
