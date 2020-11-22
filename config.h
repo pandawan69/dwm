@@ -80,6 +80,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon};
 static const char *termcmd[]  = { "st", NULL };
 
+#include <X11/XF86keysym.h>
+
 /* audio commands */
 #define volup "amixer sset 'Master' 5%+ && pkill -RTMIN+10 dwmblocks"
 #define voldown "amixer sset 'Master' 5%- && pkill -RTMIN+10 dwmblocks"
@@ -121,7 +123,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-
+  /* Laptop media keys */
+  { 0,  XF86XK_MonBrightnessUp,               spawn,		SHCMD("light -A 10") },
+  { 0,  XF86XK_MonBrightnessDown,             spawn,	  SHCMD("light -U 10") },
+  { 0,  XF86XK_AudioRaiseVolume,              spawn,	  SHCMD(volup) },
+  { 0,  XF86XK_AudioRaiseVolume,              spawn,	  SHCMD(volup) },
 	/* Tagkeys */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
