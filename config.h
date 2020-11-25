@@ -9,15 +9,19 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:pixelsize=12:autohint=true",
 				                              	"Font Awesome 5 Free Solid:style=Solid:pixelsize=12",
        				       	                  "Font Awesome 5 Brands Regular:style=Regular:pixelsize=12"};
-
+static const char dmenufonts[]          = { "Fira Code Nerd Font:style=Medium:pixelsize=12:autohint=true"};
 /* Themes */
 //Nord
 //#define dark "#2E3440"
 //#define light "#D8DEE9"
 
 //Gruvbox
-#define dark "#1D2021"
-#define light "#FBF1C7"
+//#define dark "#1D2021"
+//#define light "#FBF1C7"
+
+//Dracula
+#define dark "#282a36"
+#define light "#f8f8f2"
 
 static const char norm_fg[]      = light;
 static const char norm_bg[]      = dark;
@@ -77,7 +81,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon};
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufonts, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_border, "-sf", norm_bg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
