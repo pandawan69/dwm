@@ -20,9 +20,13 @@ static const char dmenufonts[]          = { "Fira Code Nerd Font:style=Medium:pi
 //#define light "#FBF1C7"
 
 //Dracula
-#define dark "#282a36"
-#define light "#f8f8f2"
+//#define dark "#282a36"
+//#define light "#f8f8f2"
 
+//pywal
+#include "/home/padawan/.cache/wal/colors-wal-dwm.h"
+
+/*
 static const char norm_fg[]      = light;
 static const char norm_bg[]      = dark;
 static const char norm_border[]  = dark;
@@ -30,6 +34,7 @@ static const char norm_border[]  = dark;
 static const char sel_fg[]       = dark;
 static const char sel_bg[]       = light;
 static const char sel_border[]   = light;
+*/
 
 static const char *colors[][3]      = {
 	//               fg         bg         border   
@@ -37,7 +42,6 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { sel_fg, sel_bg,  sel_border },
 	[SchemeTitle] = { norm_fg, norm_bg, norm_border },
 };
-
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5" };
