@@ -110,6 +110,8 @@ static Key keys[] = {
 	{ MODKEY,            	 	        XK_q,      killclient,     {0} },
   /* Launch scripts */
 	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD("wallpaper-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
+	{ MODKEY|ShiftMask|Mod1Mask,    XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
@@ -148,7 +150,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,		XK_q,      quit,           {1} },
+	{ MODKEY|ShiftMask,		          XK_q,      quit,           {1} },
 	{ MODKEY|Mod1Mask,             	XK_q,      quit,           {0} },
 };
 
