@@ -110,9 +110,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,            	 	        XK_q,      killclient,     {0} },
   /* Launch scripts */
-	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD("theme-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD(".scripts/theme-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD(".scripts/list-books.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
-	{ MODKEY|ShiftMask|Mod1Mask,    XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
+	{ MODKEY|ShiftMask|Mod1Mask,    XK_q,      spawn,     	   SHCMD(".scripts/power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
