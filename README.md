@@ -1,5 +1,5 @@
 # dwm
-This is my personal build of dwm. I've added some the following patches:
+This is my personal build of dwm. I've added the following patches:
 
 - attachbelow
 - bar height
