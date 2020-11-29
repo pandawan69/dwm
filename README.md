@@ -1,21 +1,13 @@
 # dwm
-DWM is a dynamic window manager made by suckless - this is my version of it.
+This is my personal build of dwm. I've added some the following patches:
 
-## TO-DO
-- [X] Initial commit
-- [X] Theme
-- [X] Text Font
-- [X] Stack attach fix
-- [X] Centered windows
-- [X] Gaps
-- [X] Centralize window title
-- [X] Bar active window indicator
-- [X] Icon Font
-- [X] dwmblocks
-- [X] scripts folder
-- [X] time/date
-- [X] memory
-- [X] volume
+- attachbelow
+- bar height
+- barpadding
+- center
+- cyclelayouts
+- fakefullscreen
+- noborder
+- ru gaps
 
-## Patches
-## Extra
+Besides that, I've also implemented a little left-padding on the window title. There are also some themes on the `config.h` file, but you can also choose to use pywal integration.
