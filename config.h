@@ -113,11 +113,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD(".scripts/theme-switcher.sh") },
 	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD(".scripts/list-books.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
-<<<<<<< HEAD
-	{ MODKEY|Mod1Mask,    XK_q,      spawn,     	   SHCMD(".scripts/power-prompt.sh") },
-=======
-	{ MODKEY|Mod1Mask,    XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
->>>>>>> 0ba11a1c89d6e16dd8b4f57786c8af35b8141edb
+	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
@@ -157,7 +153,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,		          XK_q,      quit,           {1} },
-	{ MODKEY|ShiftMask|Mod1Mask,             	XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask|Mod1Mask,   	XK_q,      quit,           {0} },
 };
 
 /* button definitions */
