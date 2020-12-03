@@ -110,7 +110,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,            	 	        XK_q,      killclient,     {0} },
   /* Launch scripts */
-	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD("theme-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD(".scripts/theme-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD(".scripts/list-books.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
 	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
@@ -152,7 +153,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,		          XK_q,      quit,           {1} },
-	{ MODKEY|ShiftMask|Mod1Mask,             	XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask|Mod1Mask,   	XK_q,      quit,           {0} },
 };
 
 /* button definitions */
