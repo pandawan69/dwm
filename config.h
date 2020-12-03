@@ -97,7 +97,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_p,      spawn,          SHCMD("rofi -show run") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -112,7 +112,7 @@ static Key keys[] = {
   /* Launch scripts */
 	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD("theme-switcher.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
-	{ MODKEY|Mod1Mask,    XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
+	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
@@ -120,6 +120,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
 	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st -e ranger") } ,
 	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("st -e nvim") } ,
+	{ MODKEY|ShiftMask,             XK_e,      spawn,     	   SHCMD("emacs") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
