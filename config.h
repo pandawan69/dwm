@@ -87,7 +87,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufonts, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_border, "-sf", norm_bg, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -119,9 +119,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
-	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("st -e ranger") } ,
+	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("alacritty -e ranger") } ,
 	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("st -e nvim") } ,
-	{ MODKEY|ShiftMask,             XK_e,      spawn,     	   SHCMD("emacs") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
