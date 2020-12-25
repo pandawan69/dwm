@@ -120,7 +120,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
 	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("alacritty -e ranger") } ,
-	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("st -e nvim") } ,
+	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("alacritty -e nvim") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
