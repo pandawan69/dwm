@@ -115,12 +115,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
 	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD(".scripts/power-prompt.sh") },
 	/* Launch programs with Super + Shift + Key */
-	{ MODKEY|ShiftMask,    	        XK_c,      spawn,     	   SHCMD("code") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
 	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("alacritty -e ranger") } ,
-	{ MODKEY|ShiftMask,             XK_v,      spawn,     	   SHCMD("alacritty -e nvim") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
