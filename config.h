@@ -82,7 +82,7 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/zsh", "-c", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -112,13 +112,13 @@ static Key keys[] = {
   /* Launch scripts */
 	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD(".scripts/theme-switcher.sh") },
 	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD(".scripts/list-books.sh") },
-	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
+	{ MODKEY|ShiftMask,    	        XK_y,      spawn,     	   SHCMD(".scripts/ytb.sh") },
 	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD(".scripts/power-prompt.sh") },
+	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
-	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("alacritty -e ranger") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
