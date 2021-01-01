@@ -110,15 +110,17 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,            	 	        XK_q,      killclient,     {0} },
   /* Launch scripts */
-	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD(".scripts/theme-switcher.sh") },
-	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD(".scripts/list-books.sh") },
-	{ MODKEY|ShiftMask,    	        XK_y,      spawn,     	   SHCMD(".scripts/ytb.sh") },
-	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD(".scripts/power-prompt.sh") },
+	{ MODKEY|ShiftMask,    	        XK_t,      spawn,     	   SHCMD("theme-switcher.sh") },
+	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD("list-books.sh") },
+	{ MODKEY|ShiftMask,    	        XK_p,      spawn,     	   SHCMD("print.sh") },
+	{ MODKEY|ShiftMask,    	        XK_y,      spawn,     	   SHCMD("ytb.sh") },
+	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD("power-prompt.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
 	/* Launch programs with Super + Shift + Key */
 	{ MODKEY|ShiftMask,             XK_o,      spawn,     	   SHCMD("obsidian") } ,
 	{ MODKEY|ShiftMask,             XK_w,      spawn,     	   SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,     	   SHCMD("zathura") } ,
+	{ MODKEY|ShiftMask,             XK_r,      spawn,     	   SHCMD("alacritty -e lf") } ,
 	/* Volume */
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,     	   SHCMD(volup) },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD(voldown) },
