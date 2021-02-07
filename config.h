@@ -114,7 +114,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    	        XK_b,      spawn,     	   SHCMD("~/scripts/list-books.sh") },
 	{ MODKEY|ShiftMask,    	        XK_p,      spawn,     	   SHCMD("~/scripts/print.sh") },
 	{ MODKEY|ShiftMask,    	        XK_y,      spawn,     	   SHCMD("~/scripts/ytb.sh") },
-	{ MODKEY|ShiftMask,    	        XK_u,      spawn,     	   SHCMD("~/scripts/update.sh") },
 	{ MODKEY|Mod1Mask,              XK_q,      spawn,     	   SHCMD("~/scripts/power-prompt.sh") },
 	{ MODKEY|ShiftMask,    	        XK_l,      spawn,     	   SHCMD("betterlockscreen -l dim") },
 	/* Launch programs with Super + Shift + Key */
